@@ -9,9 +9,14 @@ Components:
 
 
 
-## Build image
+## Build image or get it
 ```
 ./build.it
+```
+or
+```
+docker pull kompaas/playground
+docker tag kompaas/playground kompaas
 ```
 
 ## Usage:
