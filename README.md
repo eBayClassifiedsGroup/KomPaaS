@@ -2,11 +2,14 @@
 
 Compact PaaS - PoC - playgroud mode - for small based golang app PaaS closed in one container
 
+Requirements:
+* docker 1.9
+* docker pull ubuntu:14.04 (for demo example)
+
 Components:
 * Nomad
 * Consul
 * Fabio
-
 
 
 ## Build image or get it
