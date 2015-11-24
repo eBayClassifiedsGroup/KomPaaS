@@ -13,11 +13,11 @@ Components:
 
 
 ## Build image or get it
-```
+```bash
 ./build.it
 ```
 or
-```
+```bash
 docker pull kompaas/playground
 docker tag kompaas/playground kompaas
 ```
@@ -26,10 +26,14 @@ docker tag kompaas/playground kompaas
 ### interactive:
 (tmux knowledge required)
 ```bash
-# docker run --net=host --privileged --volume "/var/run/docker.sock:/var/run/docker.sock" -ti kompaas tmux attach
+docker run \
+  --net=host \
+  --privileged \
+  --volume "/var/run/docker.sock:/var/run/docker.sock" \
+  -ti kompaas tmux attach
 ```
 ### docker compose:
-```bash
+```
 # docker-compose up -d
 Creating kompaas_consul_1
 Creating kompaas_nomad_1
@@ -61,7 +65,7 @@ c3bd6561c6c4        kompaas                  "consul agent -client"   42 seconds
 ```
 
 ## Test example
-```
+```bash
 while true; do
   curl -H 'Host: python.service.consul' http://localhost:9999
 done
