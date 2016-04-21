@@ -1,9 +1,9 @@
 job "example" {
 	datacenters = ["dc1"]
-	constraint {
-		attribute = "$attr.kernel.name"
-		value = "linux"
-	}
+	#constraint {
+	#	attribute = "$attr.kernel.name"
+	#	value = "linux"
+	#}
 	update {
 		stagger = "10s"
 		max_parallel = 2
@@ -14,6 +14,7 @@ job "example" {
 			interval = "5m"
 			attempts = 10
 			delay = "2s"
+			mode = "delay"
 		}
 		task "server" {
 			driver = "docker"
