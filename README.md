@@ -18,8 +18,8 @@ Components:
 ```
 or
 ```bash
-docker pull kompaas/playground
-docker tag kompaas/playground kompaas
+docker pull kompaas/kompaas
+docker tag kompaas/kompaas kompaas
 ```
 
 ## Usage:
