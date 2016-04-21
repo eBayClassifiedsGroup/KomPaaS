@@ -2,7 +2,7 @@ consul:
   image: kompaas
   net: host
   privileged: true
-  command: "consul agent -client=0.0.0.0 -data-dir=/opt/consul/ -ui-dir=/dist/ -advertise=127.0.0.1 -dc=dc1 -server -bootstrap-expect 1"
+  command: "consul agent -client=0.0.0.0 -data-dir=/opt/consul/ -ui-dir=/opt/consul/ -advertise=127.0.0.1 -dc=dc1 -server -bootstrap-expect 1"
 
 nomad:
   image: kompaas
