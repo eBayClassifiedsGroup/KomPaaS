@@ -18,8 +18,8 @@ Components:
 ```
 or
 ```bash
-docker pull kompaas/playground
-docker tag kompaas/playground kompaas
+docker pull kompaas/kompaas
+docker tag kompaas/kompaas kompaas
 ```
 
 ## Usage:
@@ -30,6 +30,7 @@ docker run \
   --net=host \
   --privileged \
   --volume "/var/run/docker.sock:/var/run/docker.sock" \
+  --volume "/tmp:/tmp" \
   -ti kompaas tmux attach
 ```
 ### docker compose:
