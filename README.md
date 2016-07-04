@@ -10,6 +10,7 @@ Components:
 * Nomad
 * Consul
 * Fabio
+* Nomad-ui (with docker-compose only)
 
 
 ## Build image or get it
