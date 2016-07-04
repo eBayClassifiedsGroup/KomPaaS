@@ -19,7 +19,6 @@ Components:
 or
 ```bash
 docker pull kompaas/kompaas
-docker tag kompaas/kompaas kompaas
 ```
 
 ## Usage:
@@ -39,6 +38,7 @@ docker run \
 Creating kompaas_consul_1
 Creating kompaas_nomad_1
 Creating kompaas_fabio_1
+Creating kompaas_nui_1
 ```
 
 ## Start example

@@ -2,8 +2,8 @@ FROM alpine:edge
 MAINTAINER wsielski@eaby.com
 
 ENV CONSUL_VERSION 0.6.4
-ENV NOMAD_VERSION 0.3.2
-ENV FABIO_VERSION 1.1.2
+ENV NOMAD_VERSION 0.4.0
+ENV FABIO_VERSION 1.1.5
 
 # Compile and install nomad, consul and fabio.
 #
@@ -16,7 +16,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
   export GOPATH=/go && \
   go get github.com/Masterminds/glide && \
   cp /go/bin/* /usr/local/bin && \
-  glide init && \
+  glide create --skip-import  --non-interactive  && \
   glide get github.com/eBay/fabio#v${FABIO_VERSION} && \
   glide get github.com/hashicorp/nomad#v${NOMAD_VERSION} && \
   glide get github.com/hashicorp/consul#v${CONSUL_VERSION} && \
