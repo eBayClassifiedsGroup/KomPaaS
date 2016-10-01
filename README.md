@@ -36,7 +36,7 @@ docker run \
   --privileged \
   --volume "/var/run/docker.sock:/var/run/docker.sock" \
   --volume "/tmp:/tmp" \
-  -ti kompaas tmux attach
+  -ti kompaas/kompaas tmux attach
 ```
 ### docker compose:
 ```

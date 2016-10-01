@@ -1,9 +1,9 @@
 FROM alpine:edge
 MAINTAINER wsielski@eaby.com
 
-ENV CONSUL_VERSION 0.6.4
-ENV NOMAD_VERSION 0.4.0
-ENV FABIO_VERSION 1.1.5
+ENV CONSUL_VERSION 0.7.0
+ENV NOMAD_VERSION 0.4.1
+ENV FABIO_VERSION 1.3.2
 
 # Compile and install nomad, consul and fabio.
 #
@@ -28,14 +28,6 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
   rm -rf /go && \
   apk del make git go gcc musl-dev openssl-dev && \
   rm -rf /var/cache/apk/*
-
-# Install Consul UI
-#
-RUN mkdir -p /opt/consul && \
-  cd /opt/consul && \
-  curl -L https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_web_ui.zip -o ui.zip && \
-  unzip ui.zip && \
-  rm ui.zip
 
 # Install tmux and example for demo
 #
