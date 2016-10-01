@@ -10,7 +10,13 @@ Components:
 * Nomad
 * Consul
 * Fabio
+* Nomad-ui (with docker-compose only)
 
+Most important ports:
+* Consul ui: 8500
+* Fabio  ui: 9998
+* Nomad  ui: 80
+* Fabio router: 9999
 
 ## Build image or get it
 ```bash
