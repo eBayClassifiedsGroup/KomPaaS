@@ -48,6 +48,11 @@ Creating kompaas_nui_1
 ```
 
 ## Start example
+if you run tmux:
+```
+nomad run example.nomad
+```
+else:
 ```
 # docker exec -ti kompaas_nomad_1 nomad run example.nomad
 ==> Monitoring evaluation "daaac916-5ba2-12b4-7991-7670451e662c"
