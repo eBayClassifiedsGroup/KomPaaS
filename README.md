@@ -20,18 +20,18 @@ Most important ports:
 
 ## Build image or get it
 ```bash
-./build.it
+$ ./build.it
 ```
 or
 ```bash
-docker pull kompaas/kompaas
+$ docker pull kompaas/kompaas
 ```
 
 ## Usage:
 ### interactive:
 (tmux knowledge required)
 ```bash
-docker run \
+$ docker run \
   --net=host \
   --privileged \
   --volume "/var/run/docker.sock:/var/run/docker.sock" \
@@ -40,7 +40,7 @@ docker run \
 ```
 ### docker compose:
 ```bash
-# docker-compose up -d
+$ docker-compose up -d
 Creating kompaas_consul_1
 Creating kompaas_nomad_1
 Creating kompaas_fabio_1
@@ -54,7 +54,7 @@ nomad run example.nomad
 ```
 else:
 ```bash
-# docker exec -ti kompaas_nomad_1 nomad run example.nomad
+$ docker exec -ti kompaas_nomad_1 nomad run example.nomad
 ==> Monitoring evaluation "cbbea755"
     Evaluation triggered by job "example"
     Allocation "b00798bf" created: node "4522e2f4", group "python"
@@ -64,7 +64,7 @@ else:
     Evaluation status changed: "pending" -> "complete"
 ==> Evaluation "cbbea755" finished with status "complete"
 
-# docker ps
+$ docker ps
 CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS              PORTS                                                  NAMES
 5920ecba205e        python:alpine            "/bin/sh -c 'echo $HO"   7 seconds ago       Up 6 seconds        127.0.0.1:31873->8000/tcp, 127.0.0.1:31873->8000/udp   server-64a73a0f-5999-fcc2-6aa6-b1cf228d1b74
 91a51e1ced32        python:alpine            "/bin/sh -c 'echo $HO"   7 seconds ago       Up 6 seconds        127.0.0.1:42008->8000/tcp, 127.0.0.1:42008->8000/udp   server-80de4c42-4786-2c09-40c9-69002c7f79b4
@@ -78,7 +78,7 @@ e30d12884ce5        chuyskywalker/nomad-ui   "apache2-foreground"     17 seconds
 
 ## Test example
 ```bash
-while true; do
-  curl -H 'Host: python.service.consul' http://localhost:9999
-done
+$ while true; do
+    curl -H 'Host: python.service.consul' http://localhost:9999
+  done
 ```
