@@ -13,10 +13,14 @@ Compact PaaS - PoC - playgroud mode - small based golang app PaaS closed in one 
   * Nomad-ui (with docker-compose only)
 
 * Most important ports:
-  * Consul ui: 8500
-  * Fabio  ui: 9998
-  * Nomad  ui: 80
-  * Fabio router: 9999
+
+ service | port
+---------|-----
+Consul UI| 8500
+Fabio  UI| 9998
+Nomad  UI| 80
+Fabio router | 9999
+
 
 ## Build image or get it
 ```bash
