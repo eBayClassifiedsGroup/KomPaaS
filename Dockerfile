@@ -27,7 +27,9 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
   mv consul fabio nomad /usr/local/bin && \
   rm -rf /go && \
   apk del make git go gcc musl-dev openssl-dev && \
-  rm -rf /var/cache/apk/*
+  rm -rf /var/cache/apk/* && \
+  rm -rf /root/.glide && \
+  rm /usr/local/bin/glide
 
 # Install tmux and example for demo
 #
