@@ -50,7 +50,7 @@ Creating kompaas_nui_1
 ## Start example
 if you run tmux:
 ```bash
-nomad run example.nomad
+$ nomad run example.nomad
 ```
 else:
 ```bash
