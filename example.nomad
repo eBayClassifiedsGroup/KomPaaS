@@ -19,9 +19,9 @@ job "example" {
 		task "server" {
 			driver = "docker"
 			config {                        
-				image = "ubuntu:14.04"                                                                                     
-				command= "/bin/bash"
-                                args = ["-c", "echo $HOSTNAME >index.html && /usr/bin/python3 -m http.server 8000"]
+				image = "python:alpine"
+				command= "/bin/sh"
+                                args = ["-c", "echo $HOSTNAME >index.html && python3 -m http.server 8000"]
 				port_map {                                                                      
 					myhttp = 8000                                                               
 				}                                                                         
