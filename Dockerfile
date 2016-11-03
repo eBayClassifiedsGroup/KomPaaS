@@ -33,7 +33,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 
 # Install tmux and example for demo
 #
-RUN apk update; apk add tmux screen && \
+RUN apk update; apk add tmux && \
   rm -rf /var/cache/apk/* && \
   ln -s /dev/console /0 && \
   ln -s /dev/tty1 /1
