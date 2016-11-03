@@ -3,7 +3,7 @@ MAINTAINER wsielski@eaby.com
 
 ENV CONSUL_VERSION 0.7.0
 ENV NOMAD_VERSION 0.4.1
-ENV FABIO_VERSION 1.3.2
+ENV FABIO_VERSION 1.3.4
 
 # Compile and install nomad, consul and fabio.
 #
@@ -33,6 +33,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 #
 RUN apk update; apk add tmux screen && \
   rm -rf /var/cache/apk/* && \
+  ln -s /dev/console /0 && \
   ln -s /dev/tty1 /1
 ADD tmux.conf /etc/tmux.conf
 ADD example.nomad /
