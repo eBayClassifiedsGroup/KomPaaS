@@ -1,22 +1,22 @@
 # KomPaaS
 
-Compact PaaS - PoC - playgroud mode - for small based golang app PaaS closed in one container
+Compact PaaS - PoC - playgroud mode - small based golang app PaaS closed in one container
 
-Requirements:
-* docker 1.9 or higher
-* docker pull python:alpine #(only for an example)
+* Requirements:
+  * docker 1.9 or higher
+  * `docker pull python:alpine` #(only for an example)
 
-Components:
-* Nomad
-* Consul
-* Fabio
-* Nomad-ui (with docker-compose only)
+* Components:
+  * Nomad
+  * Consul
+  * Fabio
+  * Nomad-ui (with docker-compose only)
 
-Most important ports:
-* Consul ui: 8500
-* Fabio  ui: 9998
-* Nomad  ui: 80
-* Fabio router: 9999
+* Most important ports:
+  * Consul ui: 8500
+  * Fabio  ui: 9998
+  * Nomad  ui: 80
+  * Fabio router: 9999
 
 ## Build image or get it
 ```bash
