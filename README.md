@@ -10,7 +10,8 @@ Compact PaaS - PoC - playgroud mode - small based golang app PaaS closed in one 
   * Nomad
   * Consul
   * Fabio
-  * Nomad-ui (with docker-compose only)
+  * Nomad-ui uyskywalker version (with docker-compose only)
+  * Nomad-ui iverberk version (with docker-compose only)
 
 * Most important ports:
 
@@ -19,6 +20,7 @@ Compact PaaS - PoC - playgroud mode - small based golang app PaaS closed in one 
 Consul UI| 8500
 Fabio  UI| 9998
 Nomad  UI| 80
+Nomad  UI| 3000
 Fabio router | 9999
 
 

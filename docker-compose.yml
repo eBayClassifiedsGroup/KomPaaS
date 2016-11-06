@@ -19,10 +19,14 @@ fabio:
   image: kompaas/kompaas
   net: host
   privileged: true
-  command: "fabio"
+  command: "sh -c 'sleep 3;exec fabio'"
 
 nui:
   image: chuyskywalker/nomad-ui
   net: host
   environment:
     NOMAD_BASEURL: http://127.0.0.1:4646
+
+nui2:
+  image: iverberk/nomad-ui
+  net: host
