@@ -21,7 +21,7 @@ job "example" {
 			config {                        
 				image = "python:alpine"
 				command= "/bin/sh"
-                                args = ["-c", "echo $HOSTNAME >index.html && python3 -m http.server 8000"]
+                                args = ["-c", "echo hello from $HOSTNAME >index.html && python3 -m http.server 8000"]
 				port_map {                                                                      
 					myhttp = 8000                                                               
 				}                                                                         

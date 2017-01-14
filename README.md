@@ -10,8 +10,7 @@ Compact PaaS - PoC - playgroud mode - small based golang app PaaS closed in one 
   * Nomad
   * Consul
   * Fabio
-  * Nomad-ui uyskywalker version (with docker-compose only)
-  * Nomad-ui iverberk version (with docker-compose only)
+  * Nomad-ui jippi version (with docker-compose only)
 
 * Most important ports:
 
@@ -19,7 +18,6 @@ Compact PaaS - PoC - playgroud mode - small based golang app PaaS closed in one 
 ---------|-----
 Consul UI| 8500
 Fabio  UI| 9998
-Nomad  UI| 80
 Nomad  UI| 3000
 Fabio router | 9999
 
@@ -79,7 +77,7 @@ f1ea7b8984ef        python:alpine            "/bin/sh -c 'echo $HO"   7 seconds 
 557511c14cf5        kompaas/kompaas          "fabio"                  17 seconds ago      Up 16 seconds                                                              kompaas_fabio_1
 b538488d26ac        kompaas/kompaas          "consul agent -client"   17 seconds ago      Up 16 seconds                                                              kompaas_consul_1
 0f643244ef92        kompaas/kompaas          "nomad agent -dev"       17 seconds ago      Up 16 seconds                                                              kompaas_nomad_1
-e30d12884ce5        chuyskywalker/nomad-ui   "apache2-foreground"     17 seconds ago      Up 16 seconds                                                              kompaas_nui_1
+e30d12884ce5        jippi/nomad-ui   "apache2-foreground"     17 seconds ago      Up 16 seconds                                                              kompaas_nui_1
 ```
 
 ## Test example
