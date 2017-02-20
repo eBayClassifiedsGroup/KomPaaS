@@ -1,9 +1,9 @@
 FROM alpine:edge
 MAINTAINER wsielski@eaby.com
 
-ENV CONSUL_VERSION 0.7.4
+ENV CONSUL_VERSION 0.7.5
 ENV NOMAD_VERSION 0.5.4
-ENV FABIO_VERSION 1.3.7
+ENV FABIO_VERSION 1.3.8
 
 # Compile and install nomad, consul and fabio.
 #
