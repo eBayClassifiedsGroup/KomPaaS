@@ -19,11 +19,11 @@ fabio:
   image: kompaas/kompaas
   net: host
   privileged: true
-  command: "sh -c 'sleep 3;exec fabio'"
+  command: "fabio"
 
 nui:
   image: jippi/hashi-ui
-  entrypoint: "sh -c 'sleep 6;exec /hashi-ui'"
+  entrypoint: "sh -c 'sleep 10;exec /hashi-ui'"
   net: host
   environment:
     NOMAD_ENABLE: "true"
