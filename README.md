@@ -2,6 +2,8 @@
 
 Compact PaaS - PoC - playgroud mode - small based golang app PaaS closed in one container
 
+[Watch](https://www.youtube.com/watch?v=gf43TcWjBrE&list=PL81sUbsFNc5b-Gd59Lpz7BW0eHJBt0GvE&index=1) Kelsey Hightower demo Consul, Nomad, Vault and fabio at HashiConf EU 2016.
+
 * Requirements:
   * docker 1.9 or higher
   * `docker pull python:alpine` #(only for an example)
